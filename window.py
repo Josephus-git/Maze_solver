@@ -4,17 +4,18 @@ class Window:
     def __init__(self, width, height):
         self.__width = width
         self.__height = height
-        self.__root = Tk()
-        self.__root.title("Maze Solver")
-        self.__root.protocol("WM_DELETE_WINDOW", self.close)
-        self.__C = Canvas(self.__root, bg="white", height=self.__height, width=self.__width)
+        self.root = Tk()
+        self.root.title("Maze Solver")
+        self.root.protocol("WM_DELETE_WINDOW", self.close)
+        self.__C = Canvas(self.root, bg="white", height=self.__height, width=self.__width)
         self.__C.pack(fill=BOTH, expand=1)
         self.__running = False
-        
+        self.public_width = width
+        self.public_height = height
 
     def redraw(self):
-        self.__root.update_idletasks()
-        self.__root.update()  
+        self.root.update_idletasks()
+        self.root.update()  
 
     def wait_for_close(self):
         self.__running = True

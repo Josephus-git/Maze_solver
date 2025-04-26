@@ -6,6 +6,8 @@ import time
 
 import random
 
+from tkinter import Button
+
 
 class Maze:
     def __init__(
@@ -21,11 +23,20 @@ class Maze:
         self.__win, self.test = win, test
         if seed is not None:
             random.seed(seed)
+            
 
         self._create_cells()
         self._break_entrance_and_exit()
         self._break_walls_r(0,0)
         self._reset_cells_visited()
+        self.draw_button()
+
+    def draw_button(self):
+        button = Button(self.__win.root, text="Solve Maze",width=7, height=2, command=self.on_button_click)
+        button.place(x=((self.__win.public_width/2)-7), y=(self.__win.public_height-100))
+
+    def on_button_click(self):
+        self.solve()
 
     def solve(self):
         return self._solve_r(0, 0)
