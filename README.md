@@ -46,6 +46,9 @@ Once the application window appears:
 
    * **Red lines** indicate forward progress along the potential solution path.
    * **Grey lines** indicate backtracking when a dead end is reached.
+  
+## 🎬 Video
+https://github.com/user-attachments/assets/5338cc2d-7885-411f-ab7f-98d98cf9804a
 
 ## 🤝 Contributing
 Contributions are always welcome! If you have suggestions for improvements, new features, or bug fixes, please consider contributing.
