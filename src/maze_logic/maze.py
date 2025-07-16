@@ -1,5 +1,5 @@
-from cell import Cell
-from window import Point
+from maze_logic.cell import Cell
+from gui.window import Point
 import time
 import random
 from tkinter import Button

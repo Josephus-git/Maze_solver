@@ -1,6 +1,5 @@
-from window import Window, Point, Line
-from cell import Cell
-from maze import Maze
+from gui.window import Window
+from maze_logic.maze import Maze
 
 
 def main():

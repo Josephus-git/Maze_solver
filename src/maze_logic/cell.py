@@ -1,4 +1,4 @@
-from window import Point, Line
+from gui.window import Point, Line
 
 class Cell:
     """
